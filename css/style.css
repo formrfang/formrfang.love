@@ -55,3 +55,9 @@ h2 {
 .timer b {
   color: #fd637d;
 }
+.subtitle {
+  font-size: 14px;
+  color: #b07a7a;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
