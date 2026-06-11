@@ -88,19 +88,43 @@
 <!--END：计时器js-->
 
 <!--鼠标点击显示爱心-->
-<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+<script>
+(function(){
+  var hearts = [];
+  window.addEventListener('click', function(e){
+    var heart = document.createElement('div');
+    heart.style.cssText = [
+      'position:fixed',
+      'left:' + e.clientX + 'px',
+      'top:' + e.clientY + 'px',
+      'pointer-events:none',
+      'font-size:20px',
+      'color:#fd637d',
+      'user-select:none',
+      'z-index:9999',
+      'transition:all 1s ease',
+      'opacity:1'
+    ].join(';');
+    heart.innerHTML = '❤';
+    document.body.appendChild(heart);
+    setTimeout(function(){
+      heart.style.top = (e.clientY - 60) + 'px';
+      heart.style.opacity = '0';
+    }, 50);
+    setTimeout(function(){
+      document.body.removeChild(heart);
+    }, 1100);
+    hearts.push(heart);
+  });
+})();
+</script>
 </section>
       </main>
-
-      
         <script type="text/javascript" color="177, 122, 125" opacity="2" 
             zIndex="-1" count="200" 
-            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+            src="https://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
         </script>
-      
-
     </div>
-
   </body>
 </html>
 
