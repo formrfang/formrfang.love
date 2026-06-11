@@ -61,3 +61,22 @@ h2 {
   margin-top: 8px;
   letter-spacing: 1px;
 }
+/* 手机端适配 */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .timer {
+    font-size: 14px;
+  }
+
+  .timer b {
+    font-size: 20px;
+  }
+
+  .date h2 {
+    padding: 0 16px;  /* 防止文字贴边 */
+  }
+}
